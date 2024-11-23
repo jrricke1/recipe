@@ -73,6 +73,7 @@ h1{
     text-transform: uppercase;
     letter-spacing: -1px;
     color: var(--black);
+    padding-bottom: 30px;
 }
 h2{
     font-family: var(--bebas);
@@ -90,7 +91,9 @@ h3{
     color: var(--black);
 }
 
+
 nav {
+  
     grid-area: nav;
     min-width: 414px;
     background-color: #ffffff;
@@ -99,6 +102,7 @@ nav {
     top: 0;
     z-index:5;
 }
+
 nav ul {
     grid-area: hamberger;
     padding: 0;
@@ -136,10 +140,14 @@ nav span {
     font-weight: bold;
     text-transform: uppercase;
     color: var(--black);
+    text-align: center;
     
  }
 nav label svg {
     display: block;
+    padding: 25px 25px 5px 25px;
+    
+    
 }
 label span:before, label span:after {
     content: '';
@@ -154,6 +162,7 @@ nav input {
 nav input:checked ~ ul {
     max-height: 550px;
 }
+    
 nav h2 {
     visibility: hidden;
     height: 1px;
@@ -168,31 +177,12 @@ menu li {
     color: var(--orange);
 }
 
-#social li{
-    font-family: var(--bebas);
-    font-size: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: var(--orange);
-}
-
-footer{
-    font-family: var(--bebas);
-    font-size: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: var(--black);
-}
-footer h3{
-    display: none;
-}
-
 p, li, dd, nav, input{
     font-family: var(--montserrat);
     font-size: 16px;
     font-weight: 400;
     color: var(--black);
-    line-height: 1.5;
+   
 }
 
 dt{
@@ -217,7 +207,7 @@ header{
 }
 header h1{
     grid-column: span 4;
-    margin-top: 200px; 
+    margin-top: 250px; 
     text-align: center;
 }
 header menu{
@@ -233,16 +223,20 @@ header div{
 
 header p{
     margin: 20px 10px;
+    line-height: 1.5;
 }
 menu{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    padding-bottom: 20px;
 }
 menu li, menu a{
     display: block;
     grid-column: span 1;
     text-align: center;
+    
 }
+
 .details, .ingredients, .directions{
     background-color: var(--white);
     padding: 10px 5px 15px 5px;
@@ -251,11 +245,13 @@ menu li, menu a{
 .ingredients li{
     list-style-type: square;
     margin: 5px 25px;
+    line-height: 1.5;
 }
 
 .directions li{
     list-style-type: decimal;
     margin: 10px 25px;
+    line-height: 1.5;
 }
 
 aside{
@@ -317,6 +313,103 @@ aside{
     display: inline-block;
     margin: 5px;
 }
+.rating svg {
+    fill: var(--orange)
+}
+
+.side:nth-last-of-type(1) .rating svg:last-child,
+.side:nth-last-of-type(2) .rating svg:last-child,
+.side:nth-last-of-type(4) .rating svg:last-child {
+    fill: var(--white);
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+}
+
+.search input {
+    border: 2px solid var(--orange);
+    height: 45px;
+    padding: 0 10px;
+    border-right: none;
+}
+
+.search button {
+    background-color: var(--orange);
+    border: none;
+    margin: 0;
+    padding: 3px;
+    height: 48px;
+}
+
+.search button svg {
+    stroke: var(--white)
+}
+
+footer{
+    font-family: var(--bebas);
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--black);
+    background-color: var(--white);
+    padding-top: 20px;
+}
+footer h2{
+    text-align: center;
+}
+
+footer h3{
+    display: none;
+}
+
+#social li{
+    font-family: var(--bebas);
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--orange);
+}
+
+#social {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#social ul {
+    display: flex;
+    justify-content: space-around;
+    grid-column: span 4;
+    margin: 20px 5px;
+    text-align: center;
+}
+
+#social li, #social a {
+    display: block;
+    grid-column: span 4;
+}
+
+footer img{
+    display: flex;
+    width: 50%;
+    margin: 15px auto;
+
+}
+
+footer small{
+    display: block;
+    text-align: center;
+    padding: 5px;
+}
+
+
 
 
 
