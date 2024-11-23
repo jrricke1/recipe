@@ -93,14 +93,35 @@ h3{
 
 
 nav {
-  
     grid-area: nav;
     min-width: 414px;
+    width:100%;
     background-color: #ffffff;
     box-shadow: 0px 3px 3px #bbb;
     position: fixed;
     top: 0;
     z-index:5;
+}
+
+#logo {
+    display: flex;
+    justify-content: center;
+    background-color: var(--orange);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 51px;
+    width: 40%;
+}
+
+#sign-in{
+    background-color: #ffffff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    height: 51px;
 }
 
 nav ul {
@@ -129,8 +150,8 @@ nav label {
     display: inline-block;
     user-select: none;
     position: relative;
-    bottom: 5px;
-    left: 30px;
+    bottom: 7px;
+    left: 10px;
 }
 nav span {
     display: block;
@@ -146,8 +167,6 @@ nav span {
 nav label svg {
     display: block;
     padding: 25px 25px 5px 25px;
-    
-    
 }
 label span:before, label span:after {
     content: '';
