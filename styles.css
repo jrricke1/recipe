@@ -710,10 +710,11 @@ footer small{
 
     .side {
         display: block;
+        margin: 0 auto; 
     }
 
     .side img{
-        width: 75%;
+        width: 85%;
     }
 
     .author{
