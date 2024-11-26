@@ -59,6 +59,7 @@ table {
     --teal: #7ABFBF;
     --light-teal: rgba(122, 191, 191, .5);
     --orange: #EB5428;
+    --hover: #FFAC47;
 }
     /* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
 html{
@@ -66,6 +67,7 @@ html{
     }
 body{
     margin: auto;
+    width: 414px;
 }
 
 
@@ -94,11 +96,18 @@ h3{
     color: var(--black);
 }
 
+nav a:hover{
+    color: var(--white);
+    background-color: var(--orange);
+    border-radius: .5em;
+}
+
+
 
 nav {
     grid-area: nav;
     min-width: 414px;
-    width:100%;
+    width:414px;
     background-color: #ffffff;
     box-shadow: 0px 3px 3px #bbb;
     position: fixed;
@@ -147,6 +156,13 @@ nav li a {
     font-weight: bold;
     text-transform: uppercase;
     color: var(--orange);
+    transition: all .8s ease-out;
+}
+
+nav a:hover{
+    color: var(--white);
+    background-color: var(--orange);
+    border-radius: .5em;
 }
 nav label {
     cursor: pointer;
@@ -191,6 +207,15 @@ nav h2 {
     width: 1px;
 }
 
+menu svg{
+    transition: all .8s;
+}
+menu svg:hover {
+    stroke: var(--white);
+    border-radius: .5em;
+    background-color: var(--orange);
+    padding: .25em;
+}
 menu li {
     font-family: var(--bebas);
     font-size: 20px;
@@ -289,6 +314,7 @@ aside{
     padding: 25px 5px 0 0;
 }
 
+
 .rating h4{
     display: none;
 }
@@ -307,6 +333,13 @@ aside{
     grid-column: 2;
     text-decoration: none;
     color: var(--black);
+    transition: all .9s;
+}
+.side a:hover{
+    border-radius: .5em;
+    background-color: var(--orange);
+    padding: .1em .3em;
+    color: var(--white);
 }
 
 .side p {
@@ -360,6 +393,14 @@ aside{
     height: 45px;
     padding: 0 10px;
     border-right: none;
+    transition: all .5s;
+}
+
+.search input:focus {
+    border: 2px solid var(--black);
+    border-radius: .2em;
+    outline: none
+
 }
 
 .search button {
@@ -399,6 +440,7 @@ footer h3{
     color: var(--orange);
 }
 
+
 #social {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -417,6 +459,17 @@ footer h3{
     grid-column: span 4;
 }
 
+#social a svg{
+    transition: all .8s;
+} 
+
+#social a svg:hover {
+    stroke: var(--white);
+    border-radius: .5em;
+    background-color: var(--orange);
+    padding: .4em;
+}
+
 footer img{
     display: flex;
     width: 50%;
@@ -431,8 +484,13 @@ footer small{
 }
     /*-------------------- MEDIA QUERY (medium) --------------------------------*/
 @media  screen and (min-width:768px) {  
+    body{
+        width: 768px;
+    }
+    
     nav{
         height: 250px;
+        width: 768px;
     }
     
     nav ul {
@@ -441,6 +499,7 @@ footer small{
         align-items: center;
         margin: 0 -40px;
         background-color: #ffffff;
+        transition: all .5s;
     }
 
     nav li img{
@@ -471,25 +530,27 @@ footer small{
     #sign-in{
         position: absolute;
         right: 0;
-        transform: translateX(10%);
+        transform: translateX(0%);
+        
     }
 
     .search{
         position: fixed;
         top: 20px;
-        left: 65%;
+        left: 60%;
         z-index: 10;
+        transition: all .5s;
     }
     header menu{
         display: flex;
         justify-content: space-between;
         position: absolute;
         top: 320px;
-        width: 100%;
+        width: 768px;
         background-color: rgba(250, 250, 250, .4);
         padding: 10px 0;
         margin-top: 30px;
-        
+        transition: all .5s;
     }
 
     menu li, menu a{
@@ -509,11 +570,13 @@ footer small{
     .details{
         text-align: center;
         grid-column: span 2;
+        transition: all .5s;
     }
 
     aside{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        transition: all .5s;
     }
 
     aside h2{
@@ -523,6 +586,7 @@ footer small{
     footer{
         display: grid;
         grid-template-columns: repeat(2,1fr);
+        transition: all .5s;
     }
 
     footer h2{
@@ -540,8 +604,13 @@ footer small{
 }
     /*-------------------- MEDIA QUERY (large) ------------------------------------*/
 @media screen and (min-width: 1280px) {
+    body{
+        width: 1280px;
+    }
+    
     nav{
         height: 120px;
+        width: 1280px;
     }
 
     nav ul {
